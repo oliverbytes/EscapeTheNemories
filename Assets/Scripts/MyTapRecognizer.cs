@@ -1,27 +1,16 @@
 using UnityEngine;
 using System.Collections;
 
-public class TapTutorial : MonoBehaviour 
-{
-	
-	private GameObject timothy;
-	
-	void Awake()
-	{
-		timothy = GameObject.FindGameObjectWithTag("Timothy");
-	}
+public class MyTapRecognizer : MonoBehaviour {
 
 	void OnTap(TapGesture gesture) 
 	{
-//		if(gesture.Selection)
-//		{
-//			Debug.Log("Tapped the object: " + gesture.Selection.name);
-//		}
-//		else
-//		{
-//			Debug.Log("nothing was tapped");
-//		}
-		
-		timothy.SendMessage ("TimothyBrake", SendMessageOptions.DontRequireReceiver);
+		if(gesture.Selection)
+		{
+			if(gesture.Selection.name == "PlayButton")
+			{
+				Application.LoadLevel("Level1");
+			}
+		}
 	}
 }

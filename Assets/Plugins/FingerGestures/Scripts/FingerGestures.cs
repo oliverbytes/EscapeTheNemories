@@ -126,7 +126,7 @@ public class FingerGestures : MonoBehaviour
             return;
         }
 
-        Debug.Log( "FingerGestures: using " + inputProviderPrefab.name );
+        // ***** Debug.Log( "FingerGestures: using " + inputProviderPrefab.name );
 
         // remove any existing one
         if( inputProvider )

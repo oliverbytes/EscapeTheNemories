@@ -1,0 +1,12 @@
+C:\Users\Oliver\Desktop\2DGameplayTutorialProject\2DGameplayTutorial\Temp\bin\Debug\Assembly-CSharp-Editor-firstpass.dll
+C:\Users\Oliver\Desktop\2DGameplayTutorialProject\2DGameplayTutorial\Temp\bin\Debug\Assembly-CSharp-Editor-firstpass.pdb
+C:\Users\Oliver\Desktop\2DGameplayTutorialProject\2DGameplayTutorial\Temp\bin\Debug\UnityEditor.dll
+C:\Users\Oliver\Desktop\2DGameplayTutorialProject\2DGameplayTutorial\Temp\bin\Debug\UnityEditor.Graphs.dll
+C:\Users\Oliver\Desktop\2DGameplayTutorialProject\2DGameplayTutorial\Temp\bin\Debug\UnityEngine.dll
+C:\Users\Oliver\Desktop\2DGameplayTutorialProject\2DGameplayTutorial\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\Oliver\Desktop\2DGameplayTutorialProject\2DGameplayTutorial\Temp\bin\Debug\nunit.framework.dll
+C:\Users\Oliver\Desktop\2DGameplayTutorialProject\2DGameplayTutorial\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\Oliver\Desktop\2DGameplayTutorialProject\2DGameplayTutorial\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\Oliver\Desktop\2DGameplayTutorialProject\2DGameplayTutorial\obj\Debug\Assembly-CSharp-Editor-firstpass-vs.csprojResolveAssemblyReference.cache
+C:\Users\Oliver\Desktop\2DGameplayTutorialProject\2DGameplayTutorial\obj\Debug\Assembly-CSharp-Editor-firstpass.dll
+C:\Users\Oliver\Desktop\2DGameplayTutorialProject\2DGameplayTutorial\obj\Debug\Assembly-CSharp-Editor-firstpass.pdb

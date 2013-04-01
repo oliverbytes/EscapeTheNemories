@@ -11,8 +11,6 @@ Project("{E9075EE3-EC00-D424-4A0F-8210C695A8E8}") = "2DGameplayTutorial", "Assem
 EndProject
 Project("{E9075EE3-EC00-D424-4A0F-8210C695A8E8}") = "2DGameplayTutorial", "Assembly-UnityScript.unityproj", "{61854D3B-67F9-14B0-DE56-0AB0D24F7C09}"
 EndProject
-Project("{E9075EE3-EC00-D424-4A0F-8210C695A8E8}") = "2DGameplayTutorial", "Assembly-UnityScript-Editor.unityproj", "{10C8E0C8-E4E7-1B1A-DF45-23FA61188F12}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,15 +37,11 @@ Global
 		{61854D3B-67F9-14B0-DE56-0AB0D24F7C09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61854D3B-67F9-14B0-DE56-0AB0D24F7C09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61854D3B-67F9-14B0-DE56-0AB0D24F7C09}.Release|Any CPU.Build.0 = Release|Any CPU
-		{10C8E0C8-E4E7-1B1A-DF45-23FA61188F12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{10C8E0C8-E4E7-1B1A-DF45-23FA61188F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{10C8E0C8-E4E7-1B1A-DF45-23FA61188F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{10C8E0C8-E4E7-1B1A-DF45-23FA61188F12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																															GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																									GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
