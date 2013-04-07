@@ -20,15 +20,17 @@ public class MySwipeRecognizer : MonoBehaviour
 		}
 		else if(direction == FingerGestures.SwipeDirection.Left)
 		{
-			// punch, kick enemies
+
 		}
 		else if(direction == FingerGestures.SwipeDirection.Up)
 		{
 			timothy.SendMessage ("TimothyJump", SendMessageOptions.DontRequireReceiver);
+            //timothy.SendMessage("TimothyGoUp", SendMessageOptions.DontRequireReceiver);
 		}
 		else if(direction == FingerGestures.SwipeDirection.Down)
 		{
             timothy.SendMessage("TimothySwipedDown", SendMessageOptions.DontRequireReceiver);
+            //timothy.SendMessage("TimothyGoDown", SendMessageOptions.DontRequireReceiver);
 		}
 	}
 }

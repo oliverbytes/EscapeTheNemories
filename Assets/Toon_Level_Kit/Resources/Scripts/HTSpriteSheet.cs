@@ -209,7 +209,7 @@ public class HTSpriteSheet : MonoBehaviour {
 		
 		// Creation of the particle
 		CreateParticle();
-		
+
 		// We search the main camera
 		mainCamTransform = Camera.main.transform;
 		

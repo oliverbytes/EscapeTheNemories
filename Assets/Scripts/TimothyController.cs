@@ -45,16 +45,17 @@ public class TimothyController : MonoBehaviour
 	private Vector3 velocity;
 	private Vector3 timothyMovement;
 	private Transform timothyTransform;
+    public GameObject bullet;
+    public float bulletForce = 2f;
+    public float bulletLifetime = 2f;
 	private TimothyAnimation timothyAnimation;
 	private SkinnedMeshRenderer timothySkinnedMeshRenderer;
-	private Transform spawnPoint;
-	
+
 	void Start ()
 	{
 		characterController = gameObject.GetComponent<CharacterController>();
 		timothyTransform = gameObject.GetComponent<Transform>();
 		timothySkinnedMeshRenderer = gameObject.GetComponentInChildren<SkinnedMeshRenderer>();
-		spawnPoint = GameObject.Find("SpawnPoint").transform;
 		timothyMovement = Vector3.zero;
 		groundDashDurationCopy = groundDashDuration;
 		groundDashCoolDownDurationCopy = groundDashCoolDownDuration;
@@ -62,13 +63,23 @@ public class TimothyController : MonoBehaviour
         maxJumpsCopy = maxJumps;
         slideDurationCopy = slideDuration;
 	}
-	
-	void GameOver()
+
+    public void TimothyShoot(Vector2 direction)
+    {
+        GameObject bulletCopy = (GameObject) Instantiate(bullet, bullet.transform.position, Quaternion.identity);
+        bulletCopy.GetComponent<MeshRenderer>().enabled = true;
+        bulletCopy.GetComponent<SphereCollider>().enabled = true;
+        Vector3 force = direction * bulletForce;
+        bulletCopy.rigidbody.AddForce(force);
+        Destroy(bulletCopy, bulletLifetime);
+    }
+
+	private void GameOver()
 	{
-		Debug.Log("Game Over");
+		//Debug.Log("Game Over");
 	}
 	
-	void DecreaseLives()
+	private void DecreaseLives()
 	{
 		lives--;
 		
@@ -78,9 +89,11 @@ public class TimothyController : MonoBehaviour
 		}
 	}
 
-    public IEnumerator TimothyStepOnStone() 
+    public IEnumerator TimothyStumble() 
 	{
 		DecreaseLives();
+
+        SendMessage("TimothyAnimationStumble", SendMessageOptions.DontRequireReceiver);
         
         // flash
         timothySkinnedMeshRenderer.enabled = false;
@@ -145,7 +158,7 @@ public class TimothyController : MonoBehaviour
 
 	public void TimothyJump()
 	{
-        if (maxJumps > 1)
+        if (maxJumps > 0)
         {
             if(isSliding)
             {
@@ -160,15 +173,11 @@ public class TimothyController : MonoBehaviour
         }
 	}
 
-    public void TimothyFinishedJumping()
+    public void TimothyLanded()
     {
+        SendMessage("TimothyAnimationLanded", SendMessageOptions.DontRequireReceiver);
         maxJumps = maxJumpsCopy; // reset maxJumps
-
-        if (jumping) // if landed
-        {
-            SendMessage("TimothyAnimationLand", SendMessageOptions.DontRequireReceiver);
-            jumping = false;
-        }
+        jumping = false;
     }
 
 	public void TimothySlide()
@@ -177,7 +186,7 @@ public class TimothyController : MonoBehaviour
         {
             isSliding = true;
             slideDurationTimerEnabled = true;
-            transform.Rotate(-50f, 0f, 0f);
+            transform.Rotate(0f, 0f, 70f);
             characterController.height = 0.9f;
             SendMessage("TimothyAnimationSlide", SendMessageOptions.DontRequireReceiver);
         }
@@ -221,7 +230,7 @@ public class TimothyController : MonoBehaviour
         isSmashing = false;
         SendMessage("TimothyAnimationRun", SendMessageOptions.DontRequireReceiver);
     }
-	
+
 	void Update ()
 	{
 		if(groundDashing) // start groundDashing
@@ -263,22 +272,20 @@ public class TimothyController : MonoBehaviour
 		
 		if (characterController.isGrounded) // if characterController can jump
 		{
-            this.TimothyFinishedJumping();
-
-            if(isSmashing)
-            {
-                this.TimothyFinishSmash();
-            }
-		
-			if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.UpArrow)  || Input.GetKeyDown(KeyCode.W))
+			if (Input.GetButtonDown("Jump") || Input.GetKeyDown(KeyCode.W)) // jump
 			{
 				this.TimothyJump();
 			}
 			
-			if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) // dash
+			if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) // dash
 			{
 				this.TimothyDash();
 			}
+
+            if (Input.GetKeyUp(KeyCode.S)) // slide
+            {
+                this.TimothySwipedDown();
+            }
 			
 			if (Input.GetKey(KeyCode.A)  || Input.GetKey(KeyCode.LeftArrow)) // brake, slow down
 			{
@@ -295,14 +302,16 @@ public class TimothyController : MonoBehaviour
 				timothyAnimation.run.speed = timothyAnimation.runAnimationSpeedModifier;
 			}
 			
-			if (Input.GetKeyDown(KeyCode.DownArrow)) // slide
+			if (Input.GetKeyUp(KeyCode.DownArrow)) // slide
 			{
+                //this.TimothyGoDown();
                 this.TimothySwipedDown();
 			}
 			
-			if (Input.GetKey(KeyCode.UpArrow)) // fly
+			if (Input.GetKeyUp(KeyCode.UpArrow))
 			{
-				
+                //this.TimothyGoUp();
+                this.TimothyJump();
 			}
 		}
 		else // if characterController is in Air
@@ -319,6 +328,16 @@ public class TimothyController : MonoBehaviour
 		
 		if ( characterController.isGrounded )
 		{
+            if(jumping)
+            {
+                this.TimothyLanded();
+            }
+
+            if (isSmashing)
+            {
+                this.TimothyFinishSmash();
+            }
+
 			velocity = Vector3.zero; // Remove any persistent velocity after landing	
 		}
 	}
@@ -328,4 +347,3 @@ public class TimothyController : MonoBehaviour
 		this.enabled = false; // Disable this Script
 	}
 }
-

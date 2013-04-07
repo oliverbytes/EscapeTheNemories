@@ -1,0 +1,50 @@
+-debug
+-target:library
+-i:UnityEngine
+-i:System.Collections
+-base:UnityEngine.MonoBehaviour
+-nowarn:BCW0016
+-nowarn:BCW0003
+-method:Main
+-out:Temp/Assembly-UnityScript.dll
+-x-type-inference-rule-attribute:UnityEngineInternal.TypeInferenceRuleAttribute
+-pragmas:strict,downcast
+-define:UNITY_ANDROID
+-define:ENABLE_MICROPHONE
+-define:ENABLE_IMAGEEFFECTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_AUDIO_FMOD
+-define:ENABLE_NETWORK
+-define:ENABLE_MONO
+-define:ENABLE_PHYSICS
+-define:ENABLE_TERRAIN
+-define:ENABLE_CACHING
+-define:ENABLE_GENERICS
+-define:UNITY_ANDROID_API
+-define:ENABLE_CLOTH
+-define:ENABLE_AUDIO
+-define:ENABLE_WWW
+-define:ENABLE_SHADOWS
+-define:UNITY_4_0_1
+-define:UNITY_4_0
+-define:ENABLE_PROFILER
+-define:UNITY_EDITOR
+-define:UNITY_TEAM_LICENSE
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll"
+-r:Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll"
+-i:UnityEditor
+Assets/Scripts/Camera/CameraFocus.js
+Assets/Scripts/Camera/CameraScrolling.js
+Assets/Scripts/Camera/CameraTargetAttributes.js
+Assets/Scripts/LevelAttributes.js
+"Assets/Scripts/Moving Platform/MovingPlatformEffects.js"
+"Assets/Scripts/Moving Platform/PlatformMover.js"
+"Assets/Scripts/Moving Platform/PlatformTarget.js"
+Assets/Scripts/PlatformerPushBodies.js
+Assets/Scripts/lineColor.js
+"Assets/Toon_Level_Kit/Examples/Script/Character Controllers/Sources/Scripts/CharacterMotor.js"
+"Assets/Toon_Level_Kit/Examples/Script/Character Controllers/Sources/Scripts/FPSInputController.js"
+"Assets/Toon_Level_Kit/Examples/Script/Character Controllers/Sources/Scripts/PlatformInputController.js"
+Assets/Toon_Level_Kit/Examples/Script/NightWitch.js
+Assets/Toon_Level_Kit/Examples/Script/SimpleTurn.js

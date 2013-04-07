@@ -1,0 +1,61 @@
+-debug
+-target:library
+-nowarn:0169
+-out:Temp/Assembly-CSharp-firstpass.dll
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll"
+-r:"C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll"
+-define:UNITY_ANDROID
+-define:ENABLE_MICROPHONE
+-define:ENABLE_IMAGEEFFECTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_AUDIO_FMOD
+-define:ENABLE_NETWORK
+-define:ENABLE_MONO
+-define:ENABLE_PHYSICS
+-define:ENABLE_TERRAIN
+-define:ENABLE_CACHING
+-define:ENABLE_GENERICS
+-define:UNITY_ANDROID_API
+-define:ENABLE_CLOTH
+-define:ENABLE_AUDIO
+-define:ENABLE_WWW
+-define:ENABLE_SHADOWS
+-define:UNITY_4_0_1
+-define:UNITY_4_0
+-define:ENABLE_PROFILER
+-define:UNITY_EDITOR
+-define:UNITY_TEAM_LICENSE
+Assets/Plugins/FingerGestures/Scripts/Base/ContinuousGestureRecognizer.cs
+Assets/Plugins/FingerGestures/Scripts/Base/DiscreteGestureRecognizer.cs
+Assets/Plugins/FingerGestures/Scripts/Base/FingerEventDetector.cs
+Assets/Plugins/FingerGestures/Scripts/Base/GestureRecognizer.cs
+Assets/Plugins/FingerGestures/Scripts/Base/GestureRecognizerDelegate.cs
+Assets/Plugins/FingerGestures/Scripts/Components/FingerClusterManager.cs
+Assets/Plugins/FingerGestures/Scripts/Components/ScreenRaycaster.cs
+"Assets/Plugins/FingerGestures/Scripts/Finger Event Detectors/FingerDownDetector.cs"
+"Assets/Plugins/FingerGestures/Scripts/Finger Event Detectors/FingerHoverDetector.cs"
+"Assets/Plugins/FingerGestures/Scripts/Finger Event Detectors/FingerMotionDetector.cs"
+"Assets/Plugins/FingerGestures/Scripts/Finger Event Detectors/FingerUpDetector.cs"
+Assets/Plugins/FingerGestures/Scripts/FingerGestures.cs
+"Assets/Plugins/FingerGestures/Scripts/Gesture Recognizers/DragRecognizer.cs"
+"Assets/Plugins/FingerGestures/Scripts/Gesture Recognizers/LongPressRecognizer.cs"
+"Assets/Plugins/FingerGestures/Scripts/Gesture Recognizers/PinchRecognizer.cs"
+"Assets/Plugins/FingerGestures/Scripts/Gesture Recognizers/PointCloudGestureTemplate.cs"
+"Assets/Plugins/FingerGestures/Scripts/Gesture Recognizers/PointCloudRegognizer.cs"
+"Assets/Plugins/FingerGestures/Scripts/Gesture Recognizers/SwipeRecognizer.cs"
+"Assets/Plugins/FingerGestures/Scripts/Gesture Recognizers/TapRecognizer.cs"
+"Assets/Plugins/FingerGestures/Scripts/Gesture Recognizers/TwistRecognizer.cs"
+"Assets/Plugins/FingerGestures/Scripts/Input Providers/FGInputProvider.cs"
+"Assets/Plugins/FingerGestures/Scripts/Input Providers/FGMouseInputProvider.cs"
+"Assets/Plugins/FingerGestures/Scripts/Input Providers/FGTouchInputProvider.cs"
+Assets/Plugins/FingerGestures/Scripts/Toolbox/Camera/TBDragView.cs
+Assets/Plugins/FingerGestures/Scripts/Toolbox/Camera/TBLookAtTap.cs
+Assets/Plugins/FingerGestures/Scripts/Toolbox/Camera/TBOrbit.cs
+Assets/Plugins/FingerGestures/Scripts/Toolbox/Camera/TBPan.cs
+Assets/Plugins/FingerGestures/Scripts/Toolbox/Camera/TBPinchZoom.cs
+Assets/Plugins/FingerGestures/Scripts/Toolbox/TBDragToMove.cs
+Assets/Plugins/FingerGestures/Scripts/Toolbox/TBHoverChangeMaterial.cs
+Assets/Plugins/FingerGestures/Scripts/Toolbox/TBHoverChangeScale.cs
+Assets/Plugins/FingerGestures/Scripts/Toolbox/TBPinchToScale.cs
+Assets/Plugins/FingerGestures/Scripts/Toolbox/TBQuickSetup.cs
+Assets/Plugins/FingerGestures/Scripts/Toolbox/TBTwistToRotate.cs

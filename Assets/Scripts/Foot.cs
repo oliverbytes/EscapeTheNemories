@@ -1,27 +1,20 @@
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent (typeof (AudioSource))]
-[RequireComponent (typeof (SphereCollider))]
-[RequireComponent (typeof (Rigidbody))]
-
 public class Foot : MonoBehaviour 
 {
-	public float baseFootAudioVolume = 1.0f;
-	public float soundEffectPitchRandomness = 0.05f;
 	private TimothyController timothyController;
 	
 	void Start()
 	{
-		timothyController = GameObject.FindGameObjectWithTag("Timothy").GetComponent<TimothyController>();
+		timothyController = gameObject.GetComponent<TimothyController>();
 	}
 
 	void OnTriggerEnter(Collider other) 
 	{
-		if(other.gameObject.tag == "EnemyStone")
+		if(other.gameObject.tag == "EnemyStumble")
 		{
-            //other.gameObject.tag = "EnemyStoneDone";
-            timothyController.SendMessage("TimothyStepOnStone", SendMessageOptions.DontRequireReceiver);
+            timothyController.SendMessage("TimothyStumble", SendMessageOptions.DontRequireReceiver);
 		}
 		
         //CollisionParticleEffect collisionParticleEffect = other.GetComponent<CollisionParticleEffect>();
